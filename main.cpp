@@ -1,26 +1,46 @@
 #include <iostream>
 #include <conio.h>
+#include <string>
 
-using namespace std; /*  tworzymy ten fragment kodu aby nie by³o potrzeby pisania std::cout, std::cin itd */
+using namespace std;
 
 int main()
 {
-    float x; //liczba zmiennoprzecinkowa
-    float y;
-    float pole;
-    float obwod;
+    int wiek;
+    string login="Alibaba";
+    string haslo="1234";
 
-    cout<< "Program obliczajacy pole i obwod prostokata. \n"<<flush ;
-    cout<<"Podaj wymiar dluzszego boku:"<< endl;
-    cin>>x;
-    cout<<"Podaj wymiar krotszego boku:"<<endl;
-    cin>>y;
+    cout<<"Aby przejsc do dalszej czesci programu podaj login i haslo \n";
+    cout<<"Podaj login: ";
+    cin>>login;
+    cout<<"Podaj haslo: ";
+    cin>>haslo;
 
-    pole=x*y;
-    obwod=2*x+2*y;
+    if ((login!="Alibaba") || (haslo!="1234"))
+    {
+        cout<<"Niepoprawny login lub haslo \n";
+    }
 
-    cout<<"Pole prostokata wynosi: " << pole<<" natomiast obwod prostokata wynosi: "<<obwod<<endl;
+    else
+    {
+        cout<<"\n";
+        cout<<"Podaj swoj wiek: ";
+        cin>>wiek;
 
-    getch();
-    return 0;
+        if (wiek<18)
+        {
+        cout<<"Jestes niepelnoletni";
+        }
+        else if ((wiek>=18) && (wiek<35))
+        {
+        cout<<"Jestes pelnoletni, ale nie mozesz zostac prezydentem";
+        }
+        else
+        {
+        cout<<"Jestes pelnoletni i mozesz zostac prezydentem";
+        }
+
+getch();
+return 0;
+    }
 }
